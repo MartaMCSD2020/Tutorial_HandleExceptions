@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Tutorial_HandleExceptions.Controllers;
 
 namespace Tutorial_HandleExceptions
 {
@@ -47,7 +48,7 @@ namespace Tutorial_HandleExceptions
                 RouteData rutaerror = new RouteData();
                 rutaerror.Values.Add("controller", "Error");
                 rutaerror.Values.Add("action", accion);
-                IController controlador = new ErrorController();
+                IController controlador = new ErrorsController();
                 controlador.Execute(
                     new RequestContext(new HttpContextWrapper(Context), rutaerror));
             }
