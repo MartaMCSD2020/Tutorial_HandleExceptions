@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Tutorial_HandleExceptions.Controllers
 {
-    public class ErrorsController : Controller
+    public class ErrorController : Controller
     {
         // GET: Error404
         public ActionResult Error404()
